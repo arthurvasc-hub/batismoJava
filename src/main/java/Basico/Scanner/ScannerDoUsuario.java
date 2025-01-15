@@ -1,4 +1,4 @@
-package Scanner;
+package Basico.Scanner;
 import java.util.Scanner;
 
 public class ScannerDoUsuario {

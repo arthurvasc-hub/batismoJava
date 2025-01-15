@@ -1,4 +1,4 @@
-package Desafio01;
+package Basico.Desafio01;
 
 public class Ninjas {
     public static void main(String[] args) {

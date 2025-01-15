@@ -1,4 +1,4 @@
-package SwitchCase;
+package Basico.SwitchCase;
 
 import java.util.Scanner;
 
