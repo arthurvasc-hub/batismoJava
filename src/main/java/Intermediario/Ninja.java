@@ -5,10 +5,7 @@ public class Ninja {
     String aldeia;
     int idade;
 
-    // Métodos VOID não possuem retorno.
-    public void AtivarSharingan(){
-        System.out.println("O ninja ativou o Sharingan");
-    }
+
 
     // Métodos String, devem retornar uma STRING.
     public String saudacoesNinja(){

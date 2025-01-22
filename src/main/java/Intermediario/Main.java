@@ -9,31 +9,34 @@ public class Main {
 
 
         //Criar um novo ninja - Naruto Uzumaki É UM OBJETO!
-        Ninja naruto = new Ninja();
+        Uzumaki naruto = new Uzumaki();
         naruto.nome = "Naruto Uzumaki";
         naruto.aldeia = "Aldeia da Folha";
         naruto.idade = 17;
+        naruto.AtivarModoSabio();
 
         //Criar um novo ninja - Sasuke Uchiha É UM OBJETO!
-        Ninja sasuke = new Ninja();
+        Uchiha sasuke = new Uchiha();
         sasuke.nome = "Sasuke Uchiha";
         sasuke.aldeia = "Aldeia da Folha";
         sasuke.idade = 18;
-
         sasuke.AtivarSharingan();
-        String saudacao = sasuke.saudacoesNinja();
-        System.out.println("O ninja: " + sasuke.nome + " disse: " + saudacao);
-        int quantoFalta = sasuke.QuantoTempoFaltaParaHokage(50);
-        System.out.println("O ninja " + sasuke.nome + " tem " + sasuke.idade + " anos, e precisa de mais " + quantoFalta + " anos para se tornar um Hokage da aldeia da Folha." );
 
-        //Criar um novo ninja - Sakura Haruno É UM OBJETO
-        Ninja sakura = new Ninja();
+        //Criar um novo ninja - Sakura Haruno É UM OBJETO!
+        Haruno sakura = new Haruno();
         sakura.nome = "Sakura Haruno";
         sakura.aldeia = "Aldeia da Folha";
         sakura.idade = 18;
+        sakura.AtivarCura();
+
+        //Criar um novo ninja - Hinata Hyuuga É UM OBJETO!
+        Hyuuga hinata = new Hyuuga();
+        hinata.nome = "Hinata Hyuuga";
+        hinata.aldeia = "Aldeia da Folha";
+        hinata.idade = 17;
+        hinata.AtivarByakugan();
 
 
-        System.out.println("Nome do ninja mais odiado na aldeia: " + sasuke.nome);
 
     }
 }
