@@ -1,4 +1,4 @@
-package Intermediario;
+package Intermediario.Aulas;
 
 public class Uchiha extends Ninja{
     // Métodos VOID não possuem retorno.

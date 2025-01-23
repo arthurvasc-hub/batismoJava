@@ -1,4 +1,4 @@
-package Intermediario;
+package Intermediario.Aulas;
 
 public class Ninja {
     String nome;
