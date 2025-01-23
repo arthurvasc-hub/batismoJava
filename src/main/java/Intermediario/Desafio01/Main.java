@@ -1,5 +1,7 @@
 package Intermediario.Desafio01;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -7,7 +9,6 @@ public class Main {
         Scanner input = new Scanner(System.in);
         boolean menu = true;
 
-        // objeto Naruto
         Uzumaki naruto = new Uzumaki();
         naruto.nome = "Naruto Uzumaki";
         naruto.idade = 16;
@@ -15,9 +16,9 @@ public class Main {
         naruto.nivelDificuldade = "D";
         naruto.statusMissao = "Em andamento";
         naruto.habilidadeEspecial = "Modo Sabio"; //metodo de habilidade
-        naruto.mostrarHabilidadeEspecial();
 
-        // objeto Sasuke
+
+
         Uchiha sasuke = new Uchiha();
         sasuke.nome = "Sasuke Uchiha";
         sasuke.idade = 18;
@@ -25,7 +26,11 @@ public class Main {
         sasuke.nivelDificuldade = "S";
         sasuke.statusMissao = "Em andamento";
         sasuke.habilidadeEspecial = "Sharingan"; //metodo de habilidade
-        sasuke.mostrarHabilidadeEspecial();
+
+
+        List<Ninja> ninjas = new ArrayList<>();
+        ninjas.add(naruto);
+        ninjas.add(sasuke);
 
         while(menu) {
             System.out.println("\n===== Menu Ninja =====");
@@ -61,17 +66,18 @@ public class Main {
                                             System.out.println("A sua família continua com a habilidade do Sharigan.");
                                         } else {
                                             System.out.println("Escolha inválida");
-                                             System.out.println("Tente novamente.");
+                                            System.out.println("Tente novamente.");
                                             menu = false;
                                             break;
                                         };
                                 System.out.println("Atribua uma missão para seu ninja:  ");
                                     ninjaUchiha.missao = input.nextLine();
                                 System.out.println("Qual nivel de dificuldade que você considera essa missão? (F, E, D, C, B, A, S) ");
-                                    ninjaUchiha.nivelDificuldade = input.nextLine();
+                                    ninjaUchiha.nivelDificuldade = input.nextLine().toUpperCase();;
                                 System.out.println("Qual o status da missão? (Em andamento ou Concluída) ");
                                     ninjaUchiha.statusMissao = input.nextLine();
                                 System.out.println("Ninja cadastrado com sucesso. ");
+                                ninjas.add(ninjaUchiha);
                                 ninjaUchiha.mostrarInformacoesUchiha();
                                 break;
                             case 2:
@@ -89,20 +95,21 @@ public class Main {
                                            naruto.habilidadeEspecial = input.nextLine();
                                            System.out.println("A habilidade da familia Uchiha agora é: \n" + ninjaUzumaki.habilidadeEspecial + "\n\n");
                                         } if (escolhaHabilidade2.equals("nao")) {
-                                        System.out.println("A sua família continua com a habilidade do modo sábio.");
+                                            System.out.println("A sua família continua com a habilidade do modo sábio.");
                                         } else {
-                                        System.out.println("Escolha inválida");
-                                        System.out.println("Tente novamente.");
-                                        menu = false;
-                                        break;
+                                            System.out.println("Escolha inválida");
+                                            System.out.println("Tente novamente.");
+                                            menu = false;
+                                            break;
                                         };
                                 System.out.println("Atribua uma missão para ele:  ");
                                     ninjaUzumaki.missao = input.nextLine();
                                 System.out.println("Qual nivel de dificuldade que você considera essa missão? (F, E, D, C, B, A, S) ");
-                                    ninjaUzumaki.nivelDificuldade = input.nextLine();
+                                    ninjaUzumaki.nivelDificuldade = input.nextLine().toUpperCase();;
                                 System.out.println("Qual o status da missão? (Em andamento ou Concluída) ");
                                     ninjaUzumaki.statusMissao = input.nextLine();
                                 System.out.println("Ninja cadastrado com sucesso. ");
+                                ninjas.add(ninjaUzumaki);
                                 ninjaUzumaki.mostrarInformacoesUzumaki();
                                 break;
 
@@ -116,21 +123,52 @@ public class Main {
                                 System.out.println("Atribua uma missão para ele:  ");
                                 ninjaComun.missao = input.nextLine();
                                 System.out.println("Qual nivel de dificuldade que você considera essa missão? (F, E, D, C, B, A, S) ");
-                                ninjaComun.nivelDificuldade = input.nextLine();
+                                ninjaComun.nivelDificuldade = input.nextLine().toUpperCase();
                                 System.out.println("Qual o status da missão? (Em andamento ou Concluída) ");
                                 ninjaComun.statusMissao = input.nextLine();
-                                System.out.println("Ninja cadastrado com sucesso. ");
+                                System.out.println("Ninja cadastrado com sucesso. \n");
                                 ninjaComun.mostrarInformacoes();
+                                ninjas.add(ninjaComun);
                                 break;
                             default:
                                 System.out.println("Opção inválida");
                                 break;
-                            };
+                            } break;
                     case 2:
-
-
-
-
+                            System.out.println("Informações dos ninjas cadastrados: \n");
+                            for(Ninja n : ninjas){
+                                n.mostrarInformacoes();
+                            }
+                            break;
+                    case 3:
+                        System.out.println("Você só pode alterar as habilidades dos ninjas principais.");
+                        System.out.println("Eles são: 1 - " + naruto.nome + " ou 2 - " +sasuke.nome + "\n digite o numero do ninja que você quer alterar." );
+                        int alterarHabilidade = input.nextInt();
+                        input.nextLine();
+                        switch (alterarHabilidade) {
+                            case 1:
+                                System.out.println("Você escolheu alterar a habilidade do " + naruto.nome + ".");
+                                System.out.println("Digite a nova habilidade desejada: ");
+                                naruto.habilidadeEspecial = input.nextLine();
+                                System.out.println("Habilidade alterada com sucesso!");
+                                break;
+                            case 2:
+                                System.out.println("Você escolheu alterar a habilidade do " + sasuke.nome + ".");
+                                System.out.println("Digite a nova habilidade desejada: ");
+                                sasuke.habilidadeEspecial = input.nextLine();
+                                System.out.println("Habilidade alterada com sucesso!");
+                                break;
+                            default:
+                                System.out.println("Opção inválida.");
+                                break;
+                        } break;
+                    case 4:
+                            System.out.println("Você escolheu sair, até mais!");
+                            menu = false;
+                            break;
+                    default:
+                        System.out.println("Opção invalida");
+                        break;
             }
         }
         input.close();

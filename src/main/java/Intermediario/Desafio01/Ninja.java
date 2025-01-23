@@ -13,5 +13,6 @@ public class Ninja {
         System.out.println("Missao: " + missao);
         System.out.println("Nivel de dificuldade: " + nivelDificuldade);
         System.out.println("Status: " + statusMissao);
+        System.out.println("-----------------------------------------");
     }
 }
