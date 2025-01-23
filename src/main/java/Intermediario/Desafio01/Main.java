@@ -15,7 +15,7 @@ public class Main {
         naruto.missao = "Socorrer Sakura Haruno";
         naruto.nivelDificuldade = "D";
         naruto.statusMissao = "Em andamento";
-        naruto.habilidadeEspecial = "Modo Sabio"; //metodo de habilidade
+        naruto.habilidadeEspecial = "Modo Sabio";
 
 
 
@@ -25,7 +25,7 @@ public class Main {
         sasuke.missao = "Matar Itachi Uchiha";
         sasuke.nivelDificuldade = "S";
         sasuke.statusMissao = "Em andamento";
-        sasuke.habilidadeEspecial = "Sharingan"; //metodo de habilidade
+        sasuke.habilidadeEspecial = "Sharingan";
 
 
         List<Ninja> ninjas = new ArrayList<>();
