@@ -1,9 +1,9 @@
 package Intermediario.Aulas;
 
 public class Ninja {
-    String nome;
-    String aldeia;
-    int idade;
+    public String nome;
+    public String aldeia;
+    public int idade;
 
 
 

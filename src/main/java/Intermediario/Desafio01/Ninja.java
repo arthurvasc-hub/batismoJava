@@ -1,7 +1,7 @@
 package Intermediario.Desafio01;
 
 public class Ninja {
-    String nome;
+   public String nome;
     int idade;
     String missao;
     String nivelDificuldade;
