@@ -1,4 +1,4 @@
-package Intermediario.Aulas.Desafio02;
+package Intermediario.Desafio02;
 
 public class NinjaBasico implements Ninja {
     String nome;
