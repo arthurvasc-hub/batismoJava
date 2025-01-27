@@ -1,4 +1,4 @@
-package Intermediario.Aulas;
+package Intermediario.Aulas.Principal;
 
 public interface UzumakiHyuga {
     void ativarOKarma();

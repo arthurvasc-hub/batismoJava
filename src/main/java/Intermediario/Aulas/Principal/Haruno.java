@@ -1,4 +1,4 @@
-package Intermediario.Aulas;
+package Intermediario.Aulas.Principal;
 
 public class Haruno extends Ninja {
     // Métodos VOID não possuem retorno.

@@ -1,4 +1,4 @@
-package Intermediario.Aulas;
+package Intermediario.Aulas.Principal;
 
 public class Uzumaki extends Ninja {
     // Métodos VOID não possuem retorno.
