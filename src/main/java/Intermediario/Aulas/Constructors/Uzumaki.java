@@ -10,6 +10,11 @@ public class Uzumaki extends Hokage {
         super(nome, aldeia, idade, vivoOuMorto);
     }
 
+    //Sobrecarga dos contrutores
+    public Uzumaki(String nome, String aldeia, int idade, boolean vivoOuMorto, NivelNinja nivelNinja, int numeroDeMissoesConcluidas) {
+        super(nome, aldeia, idade, vivoOuMorto, nivelNinja, numeroDeMissoesConcluidas);
+    }
+
     public Uzumaki() {
     }
 }
