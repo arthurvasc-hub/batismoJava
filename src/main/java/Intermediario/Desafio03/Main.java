@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Conta corrente
-        ContaCorrente contaCC = new ContaCorrente(1000, TipoConta.CORRENTE);
+        ContaCorrente contaCC = new ContaCorrente(500, TipoConta.CORRENTE);
 
         //Conta poupança
         ContaPoupanca contaPP = new ContaPoupanca(0, TipoConta.POUPANCA);
