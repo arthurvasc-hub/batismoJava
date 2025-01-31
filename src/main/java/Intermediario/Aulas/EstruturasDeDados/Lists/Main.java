@@ -1,4 +1,4 @@
-package Intermediario.Aulas.Lists;
+package Intermediario.Aulas.EstruturasDeDados.Lists;
 
 import Basico.Arrays.Array;
 
