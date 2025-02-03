@@ -21,7 +21,7 @@ public class Main {
         ninjaList.add("Sasuke");
 
         //Na lista podemos ter elementos repetidos ->
-    System.out.println("Lista: " + ninjaList);
+        System.out.println("Lista: " + ninjaList);
 
         //Set remove os elementos repetidos
         Set<String> ninjaSet = new HashSet<>();
