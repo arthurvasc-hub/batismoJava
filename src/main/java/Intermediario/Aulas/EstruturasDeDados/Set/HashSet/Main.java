@@ -1,4 +1,4 @@
-package Intermediario.Aulas.EstruturasDeDados.Set;
+package Intermediario.Aulas.EstruturasDeDados.Set.HashSet;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -23,19 +23,11 @@ public class Main {
         //Na lista podemos ter elementos repetidos ->
         System.out.println("Lista: " + ninjaList);
 
-        //Set remove os elementos repetidos
+        //HashSet remove os elementos repetidos
         Set<String> ninjaSet = new HashSet<>();
-        ninjaSet.add("Naruto");
-        ninjaSet.add("Sasuke");
-        ninjaSet.add("Kakashi");
-        ninjaSet.add("Naruto");
-        ninjaSet.add("Sasuke");
-        System.out.println("Set: " + ninjaSet);
-
         //Podemos transformar uma lista em HashSet
         ninjaSet.addAll(ninjaList);
-        System.out.println("Set da ninjaList: " + ninjaSet);
-
+        System.out.println("Set: " + ninjaSet);
 
         //Para remover, como o Set não possui index, devemos remover passando o elemento/objeto
         ninjaSet.remove("Naruto");
